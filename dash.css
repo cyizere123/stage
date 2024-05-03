@@ -1,0 +1,41 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    background: blue;
+    color: white;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+}
+ul{
+
+    display: flex;
+    width: 100%;
+    background: rgb(80, 80, 224);
+    height: 40px;
+    justify-content: center;
+}
+li{
+    list-style:none;
+    padding: 15px;
+    justify-content: center;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;   
+    font-style: oblique;
+}
+form{
+    padding: 25px;
+}
+table{
+    border: 2px solid #444;
+    border-collapse: collapse;
+}
+tr,th,td{
+    border: 2px solid #444;
+
+}
