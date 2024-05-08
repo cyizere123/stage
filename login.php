@@ -1,11 +1,17 @@
 <?php
 include('db.php');
+session_start();
 if(isset($_POST['login'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
     $select="SELECT * FROM `shopkeeper` WHERE `username`='$username' AND `password`='$password'";
-    if(mysqli_query($con,$select)){
+    $query = mysqli_query($con,$select);
+    if($query){
+        $row = mysqli_fetch_assoc($query);
+        $_SESSION['username'] = $row['username'];
         header('location:dashboard.php');
+    }else{
+        echo "not martching";
     }
 }
 
